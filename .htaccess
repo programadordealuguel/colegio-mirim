@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# O menu aponta para /sobre, /galeria, /contato e /home, sem .html.
+RewriteRule ^home/?$ index.html [L]
+RewriteRule ^sobre/?$ sobre.html [L]
+RewriteRule ^contato/?$ contato.html [L]
+RewriteRule ^galeria/?$ galeria.html [L]
+RewriteRule ^ensino-infantil/?$ ensino-infantil.html [L]
+RewriteRule ^ensino-fundamental/?$ ensino-fundamental.html [L]
+
+DirectoryIndex index.html
