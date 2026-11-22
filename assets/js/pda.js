@@ -210,7 +210,8 @@
         ". E-mail: " + email +
         ". Telefone: " + phone +
         ". Mensagem: " + message;
-      window.open("https://wa.me/5571992645794?text=" + encodeURIComponent(text), "_blank", "noopener");
+      var phone = form.getAttribute("data-wa") || "5571992645794";
+      window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(text), "_blank", "noopener");
       note.textContent = "Abrimos o WhatsApp com a sua mensagem.";
       note.className = "form-note is-ok";
       form.reset();

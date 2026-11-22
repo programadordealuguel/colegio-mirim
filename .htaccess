@@ -1,11 +1,18 @@
 RewriteEngine On
+RewriteRule ^home/?$ /colegiomirim2026/ [R=301,L]
+RewriteRule ^ensino-infantil/?$ /colegiomirim2026/servico/ensino-infantil/ [R=301,L]
+RewriteRule ^ensino-fundamental/?$ /colegiomirim2026/servico/ensino-fundamental/ [R=301,L]
 
-# O menu aponta para /sobre, /galeria, /contato e /home, sem .html.
-RewriteRule ^home/?$ index.html [L]
-RewriteRule ^sobre/?$ sobre.html [L]
-RewriteRule ^contato/?$ contato.html [L]
-RewriteRule ^galeria/?$ galeria.html [L]
-RewriteRule ^ensino-infantil/?$ ensino-infantil.html [L]
-RewriteRule ^ensino-fundamental/?$ ensino-fundamental.html [L]
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /colegiomirim2026/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /colegiomirim2026/index.php [L]
+</IfModule>
+# END WordPress
 
-DirectoryIndex index.html
+DirectoryIndex index.php index.html

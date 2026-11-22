@@ -160,6 +160,15 @@ h1, h2, h3, p {
   color: #fff;
 }
 
+.insta-cta {
+  text-align: center;
+}
+
+.insta-cta .btn img {
+  width: 18px;
+  height: 18px;
+}
+
 .nav-cta {
   background: var(--btn-green);
   min-height: 48px;
@@ -661,7 +670,7 @@ a.grade:hover {
 .enroll {
   max-width: 760px;
   margin: 0 auto;
-  padding: 42px 36px 28px;
+  padding: 42px 36px 48px;
   border-radius: 32px;
   background: #fff;
   text-align: center;
@@ -697,6 +706,28 @@ a.grade:hover {
 
 .enroll-row a:hover {
   color: var(--purple);
+}
+
+.enroll-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--whatsapp);
+  color: #fff;
+  font-weight: 600;
+}
+
+.enroll-cta:hover {
+  color: #fff;
+  background: #1ebe5b;
+}
+
+.enroll-cta svg {
+  display: block;
 }
 
 .activity-grid,
@@ -1076,6 +1107,18 @@ a.grade:hover {
   align-items: center;
 }
 
+.story .entry p {
+  margin: 0 0 1em;
+}
+
+.story .entry p:first-child {
+  font-size: 17px;
+}
+
+.story .entry p:last-child {
+  margin-bottom: 0;
+}
+
 .story img,
 .mission img {
   width: 100%;
@@ -1381,6 +1424,13 @@ a.grade:hover {
 .field textarea:focus {
   outline: 2px solid var(--yellow);
   border-color: transparent;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
 }
 
 .form-note {
